@@ -177,6 +177,3 @@ New members are welcome if they have the same philosophy with the organization.
 
 [MIT](https://opensource.org/licenses/MIT) - Free Software for Everyone.
 
-## Credits
-
-Rainbow icon by <a href="https://icons8.com/icon/115665/rainbow">Icons8</a>
