@@ -12,14 +12,11 @@
 
   * [Description](#description)
   * [Installation](#installation)
-    * [First way](#first-way)     
-    * [Second way](#second-way)  
   * [Documentation](#documentation)  
   * [Examples](#examples)     
     * [Example 1](#example-1)     
     * [Example 2](#example-2)     
     * [Example 3](#example-3)     
-    * [More examples](#more-examples)  
   * [Contributing](#contributing)  
   * [Issue Template](#issue-template)    
     * [Bug report](#bug-report)   
@@ -59,6 +56,9 @@ and just add ```rf ``` in front of the color for foreground or ``` rb ``` for ba
 
 ## Examples
 
+First you need to import rainbow in top of your file
+
+``` import rainbow ``` 
 
 ### Example 1
 
