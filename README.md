@@ -1,6 +1,6 @@
-<h1 align="center">
+<h1 align="center" width="256">
   <br>
-   <img src="https://img.icons8.com/dusk/64/000000/rainbow.png" width=90>
+   ![rainbow](https://user-images.githubusercontent.com/22755228/66673665-b2fa9a80-ec69-11e9-80ff-250455dddce0.png)
   <br>
 </h1>
 
@@ -179,6 +179,3 @@ New members are welcome if they have the same philosophy with the organization.
 
 [MIT](https://opensource.org/licenses/MIT) - Free Software for Everyone.
 
-## Credits
-
-Rainbow icon by <a href="https://icons8.com/icon/115665/rainbow">Icons8</a>
