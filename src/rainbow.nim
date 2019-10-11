@@ -13,7 +13,7 @@
 ## 
 ## Example (background) :
 ##
-## ``` echo "This is the output".bgFuchsia ```
+## ``` echo "This is the output".rbFuchsia ```
 
 #Reset procedure 
 proc reset(): string {.procvar.} = "\e[0m"
