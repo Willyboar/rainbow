@@ -1,13 +1,11 @@
-<h1 align="center" width="256">
-  <br>
-   ![rainbow](https://user-images.githubusercontent.com/22755228/66673665-b2fa9a80-ec69-11e9-80ff-250455dddce0.png)
-  <br>
-</h1>
+<h1 align="center">
+<img src="https://user-images.githubusercontent.com/22755228/66673982-79765f00-ec6a-11e9-90c3-95f81f844c74.png">
+ </h1>
 
 <p align="center">  
  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 </p>
-<h2 align="center">Rainbow</h2>
+<h1 align="center">Rainbow</h1>
 <p align="center">Rainbow is a Nim Library supporting 256-color for console. You can use it to color your output, log or anything you want.</p>
 
 ## Table of contents
@@ -179,3 +177,6 @@ New members are welcome if they have the same philosophy with the organization.
 
 [MIT](https://opensource.org/licenses/MIT) - Free Software for Everyone.
 
+## Credits
+
+Rainbow icon by <a href="https://icons8.com/icon/115665/rainbow">Icons8</a>
