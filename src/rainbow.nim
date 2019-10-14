@@ -19,6 +19,7 @@
 proc reset(): string {.procvar.} = "\e[0m"
 
 #Rainbow 256 Foreground Colors
+proc rfBlack*(s: string): string {.procvar.} = "\e[38;5;0m" & s & reset()
 proc rfMaroon*(s: string): string {.procvar.} = "\e[38;5;1m" & s & reset()
 proc rfGreen*(s: string): string {.procvar.} = "\e[38;5;2m" & s & reset()
 proc rfOlive*(s: string): string {.procvar.} = "\e[38;5;3m" & s & reset()
@@ -276,6 +277,7 @@ proc rfGrey89*(s: string): string {.procvar.} = "\e[38;5;254m" & s & reset()
 proc rfGrey93*(s: string): string {.procvar.} = "\e[38;5;255m" & s & reset()
 
 #Rainbow 256 Background Colors
+proc rbBlack*(s: string): string {.procvar.} = "\e[48;5;0m" & s & reset()
 proc rbMaroon*(s: string): string {.procvar.} = "\e[48;5;1m" & s & reset()
 proc rbGreen*(s: string): string {.procvar.} = "\e[48;5;2m" & s & reset()
 proc rbOlive*(s: string): string {.procvar.} = "\e[48;5;3m" & s & reset()
