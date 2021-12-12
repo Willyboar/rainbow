@@ -27,6 +27,19 @@ proc fgRGB*(s:string, r:Natural, g:Natural, b:Natural): string = "\e[38;2;" & $r
 
 proc bgRGB*(s:string, r:Natural, g:Natural, b:Natural): string = "\e[48;2;" & $r & ";" & $g & ";" & $b & "m" & s & reset()
 
+# Other not widely supported ansi escape codes
+# see https://www.xfree86.org/current/ctlseqs.html
+# for more informations
+proc italic*(s:string): string = "\e[3m" & s & reset()
+proc bold*(s:string): string = "\e[1m" & s & reset()
+proc underlined*(s:string): string = "\e[4m" & s & reset()
+proc faint*(s:string): string = "\e[2m" & s & reset()
+proc blink*(s:string): string = "\e[5m" & s & reset()
+proc inversed*(s:string): string = "\e[7m" & s & reset()
+proc invisible*(s:string): string = "\e[8m" & s & reset()
+proc noblink*(s:string): string = "\e[25m" & s & reset()
+
+
 #Rainbow 256 Foreground Colors
 proc rfBlack*(s: string): string = "\e[38;5;0m" & s & reset()
 proc rfMaroon*(s: string): string = "\e[38;5;1m" & s & reset()
@@ -132,7 +145,7 @@ proc rfYellow6*(s: string): string = "\e[38;5;100m" & s & reset()
 proc rfWheat4*(s: string): string = "\e[38;5;101m" & s & reset()
 proc rfGrey53*(s: string): string = "\e[38;5;102m" & s & reset()
 proc rfLightSlateGrey*(s: string): string = "\e[38;5;103m" & s & reset()
-proc rfMediumPurple7(s: string): string = "\e[38;5;104m" & s & reset()
+proc rfMediumPurple7*(s: string): string = "\e[38;5;104m" & s & reset()
 proc rfLightSlateBlue*(s: string): string = "\e[38;5;105m" & s & reset()
 proc rfYellow4*(s: string): string = "\e[38;5;106m" & s & reset()
 proc rfDarkOliveGreen5*(s: string): string = "\e[38;5;107m" & s & reset()
@@ -203,7 +216,7 @@ proc rfMediumOrchid2*(s: string): string = "\e[38;5;171m" & s & reset()
 proc rfOrange3*(s: string): string = "\e[38;5;172m" & s & reset()
 proc rfLightSalmon2*(s: string): string = "\e[38;5;173m" & s & reset()
 proc rfLightPink3*(s: string): string = "\e[38;5;174m" & s & reset()
-proc rfPink3(s: string): string = "\e[38;5;175m" & s & reset()
+proc rfPink3*(s: string): string = "\e[38;5;175m" & s & reset()
 proc rfPlum3*(s: string): string = "\e[38;5;176m" & s & reset()
 proc rfViolet*(s: string): string = "\e[38;5;177m" & s & reset()
 proc rfGold3*(s: string): string = "\e[38;5;178m" & s & reset()
@@ -390,7 +403,7 @@ proc rbYellow6*(s: string): string = "\e[48;5;100m" & s & reset()
 proc rbWheat4*(s: string): string = "\e[48;5;101m" & s & reset()
 proc rbGrey53*(s: string): string = "\e[48;5;102m" & s & reset()
 proc rbLightSlateGrey*(s: string): string = "\e[48;5;103m" & s & reset()
-proc rbMediumPurple7(s: string): string = "\e[48;5;104m" & s & reset()
+proc rbMediumPurple7*(s: string): string = "\e[48;5;104m" & s & reset()
 proc rbLightSlateBlue*(s: string): string = "\e[48;5;105m" & s & reset()
 proc rbYellow4*(s: string): string = "\e[48;5;106m" & s & reset()
 proc rbDarkOliveGreen5*(s: string): string = "\e[48;5;107m" & s & reset()
@@ -461,7 +474,7 @@ proc rbMediumOrchid2*(s: string): string = "\e[48;5;171m" & s & reset()
 proc rbOrange3*(s: string): string = "\e[48;5;172m" & s & reset()
 proc rbLightSalmon2*(s: string): string = "\e[48;5;173m" & s & reset()
 proc rbLightPink3*(s: string): string = "\e[48;5;174m" & s & reset()
-proc rbPink3(s: string): string = "\e[48;5;175m" & s & reset()
+proc rbPink3*(s: string): string = "\e[48;5;175m" & s & reset()
 proc rbPlum3*(s: string): string = "\e[48;5;176m" & s & reset()
 proc rbViolet*(s: string): string = "\e[48;5;177m" & s & reset()
 proc rbGold3*(s: string): string = "\e[48;5;178m" & s & reset()
@@ -543,5 +556,6 @@ proc rbGrey85*(s: string): string = "\e[48;5;253m" & s & reset()
 proc rbGrey89*(s: string): string = "\e[48;5;254m" & s & reset()
 proc rbGrey93*(s: string): string = "\e[48;5;255m" & s & reset()
 
-
+when defined(windows):
+    echo "[WARNING]".fgRGB(225,255,96) & "It appears that you are compiling on a windows or for a windows machine\nPlease note that font settings wont be available for that platform."
 
