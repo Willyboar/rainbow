@@ -18,6 +18,11 @@
 #Reset procedure 
 proc reset(): string = "\e[0m"
 
+#RGB procedures
+proc fgRGB*(s:string, r:Natural, g:Natural, b:Natural): string = "\e[38;2;" & $r & ";" & $g & ";" & $b & "m" & s & reset()
+
+proc bgRGB*(s:string, r:Natural, g:Natural, b:Natural): string = "\e[48;2;" & $r & ";" & $g & ";" & $b & "m" & s & reset()
+
 #Rainbow 256 Foreground Colors
 proc rfBlack*(s: string): string = "\e[38;5;0m" & s & reset()
 proc rfMaroon*(s: string): string = "\e[38;5;1m" & s & reset()
