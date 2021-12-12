@@ -16,7 +16,8 @@
   * [Examples](#examples)     
     * [Example 1](#example-1)     
     * [Example 2](#example-2)     
-    * [Example 3](#example-3)     
+    * [Example 3](#example-3)
+    * [Example 4](#example-4)     
   * [Contributing](#contributing)  
   * [Issue Template](#issue-template)    
     * [Bug report](#bug-report)   
@@ -74,7 +75,22 @@ Or you can compine them:
 
 ``` echo "Let's SEE !!!".rbSkyBlue2.rfSilver ```
 
+### Example 4
 
+Rainbow supports RGB colors in terminal
+
+Example:
+
+```
+echo "Hello world".fgRGB(0,0,255) # Put "Hello world" in blue
+echo "Hello world".bgRGB(0,0,255) # Put "Hello world" background in blue
+
+```
+
+> ### Notes:
+> Values can go from 0 (Black) to 255 (Lightest). Higher values will result in none colored output
+On windows OS the VirtualTerminalLevel register key need to be set to 1 in HKCU\Console as a D_WORD
+Use that command to add it permanantly reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 00000001
 
 
 ## Contributing
