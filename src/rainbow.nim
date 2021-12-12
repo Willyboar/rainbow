@@ -14,6 +14,10 @@
 ## Example (background) :
 ##
 ## ``` echo "This is the output".rbFuchsia ```
+##
+## Example (RGB) :
+## ``` echo "Hello world".fgRGB(0,0,255) ```
+## ``` echo "Hello world".bgRGB(0,0,255) ```
 
 #Reset procedure 
 proc reset(): string = "\e[0m"
